@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  font-family: "Montserrat", serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --color-text-primaria-p: gray;
+  --font-size-24: 24px;
+  --font-size-logo:24px;
+  --padding-button:15px;
+}
+
+body{
+  background-color: white;
+  width: 100%;
+}
+.head_main{
+  display: flex;
+  background-color: #0e0e0e;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  height: 10vh;
+  padding: 0 20px;
+  border-bottom: 0.8px solid white;
+}
+.head_main nav> ul{
+  position: absolute;
+  left: 0;
+  top: calc(20vh/2);
+  background-color:#0e0e0e;
+  width: 100%;
+  height: 1vh;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.head_main nav> ul.open{
+  height: 28vh;
+  overflow: auto;
+}
+.head_main nav> ul> li{
+  padding: 8px;
+}
+.head_main nav> ul> li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+}
+.head_main nav > ul > .btn-master{
+  background-color: #5ce1e6;
+  display:inline-block;
+  margin: 10px 8px;
+  border-radius: 8px;
+  padding: 12px;
+}
+.head_main nav > ul > .btn-master a{
+  font-weight: 800;
+  color: #0e0e0e;
+}
+.head_main .logo{
+  max-width: 30%;
+}
+.head_main .logo img{
+  width: 100%;
+}
+.head_main nav> .menu .btn{
+  background-color: #5ce1e6;
+  border:none;
+  padding: 8px 12px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.2s ease-out;
+}
+.head_main nav> .menu .btn.befer{
+  background-color: transparent;
+  border: #5ce1e6 solid 1px;
+  color: white;
+}
+.main_lower{
+  background-color: grey;
+  width: 100%;
+  height: 100%;
+}
+
+.main_lower .hero-banner{
+  display: block;
+  width: 100%;
+  background:linear-gradient(45deg,#000000de,#000000df),url("img/midia.jpg");
+  background-size:cover;
+}
+.main_lower .hero-banner .card1{
+  padding:20px;
+}
+.main_lower .hero-banner .card-banner .card1 .text-name h2{
+  color: #5ce1e6;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.main_lower .hero-banner .card-banner .card1 .text-name p{
+  color: white;
+  font-size: 14px;
+  font-weight: 200;
+}
+.main_lower .hero-banner .card-banner .card1 .text-name h2>span{
+  color: white;
+  font-weight: 800;
+}
+.main_lower .hero-banner .card-banner .card1 .text-name .btn-agendar button{
+  color: white;
+  border:2px solid #5ce1e6;
+  outline: none;
+  padding: 1.2em 1em;
+  background-color: black;
+  margin: 1.2em 0;
+}
+.main_lower .hero-banner .card-banner .card1 .text-name .btn-agendar button a{
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: snow;
+}
+.main_lower .video-hellocome{
+  width: 100%;
+  max-width: 800px;
+  display:flex;
+  position: relative;
+}
+.main_lower .video-hellocome video {
+  max-width: 100%;
+  width: 100%
+  height: auto;
+  min-height: 200px;
+  object-fit: cover;
+  border: 2px solid #5ce1e6;
+}
+.services-main{
+  background-color: #0e0e0e;
+  padding: 20px 0;
+}
+.services-main .h1-case{
+  text-align: center;
+  margin: 0 auto;
+  
+}
+.services-main .h1-case h1{
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 24px;
+  color: #5ce1e6;
+  margin: 20px 0;
+}
+.services-main .lower-service{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px 1fr));
+  gap: 20px;
+}
+.services-main .lower-service .card-services .card{
+  background-color: white;
+}
+.services-main .lower-service .card-services .card{
+  margin: 0 20px;
+  padding: 10px;
+  border-bottom: 4px solid #5ce1e6;
+}
+.services-main .lower-service .card-services .card .text-card h2{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+}
+.services-main .lower-service .card-services .card .description p{
+  text-align: center;
+  font-size: 18px;
+}
