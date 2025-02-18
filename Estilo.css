@@ -80,7 +80,7 @@ body{
 .head_main nav> .menu .btn.befer{
   background-color: transparent;
   border: var(--color-primary) solid 1px;
-  color: white;
+  color: var(--color-primary);
 }
 .main_lower{
   background-color: grey;
