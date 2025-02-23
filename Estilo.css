@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat", Arial,Sans-Serif,serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -13,6 +13,12 @@
   --padding-button: 15px;
   --color-primary: #d13310;
 }
+.card.left{
+  border-left:  2px solid #1767cc;
+}
+.card.rigth{
+  border-right:  2px solid #1767cc;
+}
 html{
   scroll-behavior: smooth;
 }
@@ -22,7 +28,7 @@ body {
 }
 .head_main {
   display: flex;
-  background-color: white;
+  background-color: #211c32;
   align-items: center;
   position: relative;
   justify-content: space-between;
@@ -33,19 +39,21 @@ body {
 .head_main nav> ul {
   position: absolute;
   left: 0;
-  top: calc(10vh);
-  background-color: #0e0e0e;
-  width: 100%;
+  top: 0;
+  background-color: #100d28;
+  width: 70%;
   height: 0;
   overflow: hidden;
   transition: 0.2s;
+  z-index: 1000;
 }
 .head_main nav> ul.open {
-  height: 28vh;
-  overflow: auto;
+  height: 100vh;
 }
 .head_main nav> ul> li {
   padding: 8px;
+  margin: 4em 3em;
+  list-style: none;
 }
 .head_main nav> ul> li a {
   text-decoration: none;
@@ -54,15 +62,18 @@ body {
   color: white;
 }
 .head_main nav > ul > .btn-master {
-  background-color: var(--color-primary);
-  display: inline-block;
-  margin: 10px 8px;
+  background-color: #1767cc;
+  display:block;
   border-radius: 8px;
-  padding: 12px;
+  width: 70%;
+  padding: 8px;
+  margin: 0 auto;
 }
 .head_main nav > ul > .btn-master a {
   font-weight: 800;
   color: #0e0e0e;
+  font-size: 12px;
+  text-align: center;
 }
 .head_main .logo {
   max-width: 10%;
@@ -71,7 +82,7 @@ body {
   width: 100%;
 }
 .head_main nav> .menu .btn {
-  background-color: var(--color-primary);
+  background-color:#1767cc;
   border: none;
   padding: 8px 12px;
   font-size: 20px;
@@ -94,11 +105,11 @@ body {
 .main_lower .hero-banner {
   display: block;
   width: 100%;
-  background: linear-gradient(45deg,#000000de,#000000df),url("img/midia.jpg");
-  background-size: cover;
+  background-color: #100d28;
+  padding: 2em;
 }
 .main_lower .hero-banner .card1 {
-  padding: 20px;
+  padding: 1.4em 0;
 }
 .main_lower .hero-banner .card-banner .card1 .text-name h2 {
   color: white;
@@ -110,19 +121,20 @@ body {
   color: white;
   font-size: 14px;
   font-weight: 400;
-  color: #141414;
+  color: snow;
+  margin: 1.2em 0;
 }
-.main_lower .hero-banner .card-banner .card1 .text-name h2>span {
-
-  font-weight: 800;
+.main_lower .hero-banner .card-banner .card1 .text-name h2>span{
+  font-size: 28px;
+  color: #2984e3;
 }
 .main_lower .hero-banner .card-banner .card1 .text-name .btn-agendar button {
   color: white;
   outline: none;
   border: none;
   padding: 1.2em 1em;
-  background-color: var(--color-primary);
-  margin: 1.2em 0;
+  background-color: #2984e3;
+  margin: 2em 0;
 }
 .main_lower .hero-banner .card-banner .card1 .text-name .btn-agendar button a {
   font-size: 16px;
@@ -133,20 +145,19 @@ body {
 }
 .main_lower .video-hellocome {
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   display: flex;
   position: relative;
 }
-.main_lower .video-hellocome video {
+.main_lower .video-hellocome img{
   max-width: 100%;
   width: 100%
   height: auto;
   min-height: 200px;
   object-fit: cover;
-  border: 2px solid var(--color-primary);
 }
 .services-main {
-  background-color: #f2f2f2;
+  background-color: #100d28;
 }
 .services-main .h1-case {
   padding: 20px 0 0 20px;
@@ -154,68 +165,78 @@ body {
 .services-main .h1-case h1 {
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 18px;
-  color: white;
+  font-size: 24px;
+  color: #1767cc;
   text-align: left;
-  background-color: var(--color-primary);
-  width: 60%;
+  width: 100%;
   padding: 8px;
 }
 .services-main .h1-case p {
   text-align: left;
-  font-size: calc(44px/2);
+  font-size: 18px;
   font-weight: 400;
-  padding: 25px 15px 0 0;
+  padding: 25px 0;
+  color: snow;
 }
 .services-main .lower-service {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(300px 1fr));
 }
-.services-main .lower-service .card-services:nth-child(4) {
-  margin-bottom: 30px;
-}
-
 .services-main .lower-service .card-services .card {
-  background-color: white;
+  background-color: #211c32;
   margin: 20px 20px;
   padding: 20px 25px;
   box-shadow: 5px 5px 20px #0e0e0e12;
   border-start-start-radius:5px;
+  position: relative;
+}
+.services-main .lower-service .card-services .card .verifc{
+  position: absolute;
+  right: -10px;
+  top: -20px;
+  width: 30px;
 }
 .services-main .lower-service .card-services .card img{
   width: 15%;
   margin: 10px 0;
 }
+
 .services-main .lower-service .card-services .card .text-card h2 {
   font-size: 22px;
   text-transform: uppercase;
   font-weight: 800;
   text-align: left;
+  color: white;
 }
 .services-main .lower-service .card-services .card .description p {
   text-align: left;
   font-size: 18px;
   margin: 20px 0;
+  color: white;
 }
 
 .bener-case {
-  background-color:#111111;
+  background-color:#100d28;
 }
-.bener-case .card-main .bottom{
-  padding-bottom: 50px;
+.bener-case .card-main{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(1fr,200px));
+  align-items: center;
+  justify-content: center;
 }
 .bener-case  .card {
+  background-color: #211c32;
+  margin: 20px 20px;
   padding: 20px 25px;
-  box-shadow: 5px 5px 20px #1414146;
+  box-shadow: 5px 5px 20px #0e0e0e12;
   border-start-start-radius:5px;
-  background-color: ##151515;
 }
 .bener-case .card .text-card h2 {
-  font-size: 68px;
+  font-size: 34px;
   text-transform: uppercase;
   font-weight: 900;
-  text-align: left;
-  color: rgb(152,29,221);
+  text-align: center;
+  color: #2984e3;
 }
 .bener-case .card .text-card p{
   font-size: 12px;
@@ -233,11 +254,11 @@ body {
   padding: 40px;
 }
 .bener-case .h1-case h1{
-  font-size: 22px;
+  font-size: 24px;
   text-transform: uppercase;
   font-weight: 800;
-  text-align: left;
-  color: rgb(152,29,221);
+  text-align: center;
+  color: #1767cc;
   padding: 15px 0;
   
 }
@@ -245,7 +266,7 @@ body {
   color: snow;
 }
 .quem-somos{
-  background-color: snow;
+  background-color: hsl(278.4,0%,6.5%);
 }
 .quem-somos .h1-case{
   padding: 40px;
@@ -255,12 +276,12 @@ body {
   text-transform: uppercase;
   font-weight: 800;
   text-align: left;
-  color: rgb(152,29,221);
+  color: #1767cc;
   padding: 15px 0;
   
 }
 .quem-somos .h1-case p{
-  color: rgb(5,5,5);
+  color: snow;
 }
 .quem-somos  .about-video{
   width: 100%;
