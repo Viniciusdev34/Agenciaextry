@@ -13,13 +13,13 @@
   --padding-button: 15px;
   --color-primary: #d13310;
 }
-.card.left{
-  border-left:  2px solid #1767cc;
+.card.left {
+  border-left: 2px solid #1767cc;
 }
-.card.rigth{
-  border-right:  2px solid #1767cc;
+.card.rigth {
+  border-right: 2px solid #1767cc;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -28,7 +28,8 @@ body {
 }
 .head_main {
   display: flex;
-  background-color: #211c32;
+  background-color:
+  #snow;
   align-items: center;
   position: relative;
   justify-content: space-between;
@@ -63,7 +64,7 @@ body {
 }
 .head_main nav > ul > .btn-master {
   background-color: #1767cc;
-  display:block;
+  display: block;
   border-radius: 8px;
   width: 70%;
   padding: 8px;
@@ -76,13 +77,13 @@ body {
   text-align: center;
 }
 .head_main .logo {
-  max-width: 10%;
+  max-width: 20%;
 }
 .head_main .logo img {
   width: 100%;
 }
 .head_main nav> .menu .btn {
-  background-color:#1767cc;
+  background-color: #1767cc;
   border: none;
   padding: 8px 12px;
   font-size: 20px;
@@ -124,7 +125,7 @@ body {
   color: snow;
   margin: 1.2em 0;
 }
-.main_lower .hero-banner .card-banner .card1 .text-name h2>span{
+.main_lower .hero-banner .card-banner .card1 .text-name h2>span {
   font-size: 28px;
   color: #2984e3;
 }
@@ -149,7 +150,7 @@ body {
   display: flex;
   position: relative;
 }
-.main_lower .video-hellocome img{
+.main_lower .video-hellocome img {
   max-width: 100%;
   width: 100%
   height: auto;
@@ -187,16 +188,16 @@ body {
   margin: 20px 20px;
   padding: 20px 25px;
   box-shadow: 5px 5px 20px #0e0e0e12;
-  border-start-start-radius:5px;
+  border-start-start-radius: 5px;
   position: relative;
 }
-.services-main .lower-service .card-services .card .verifc{
+.services-main .lower-service .card-services .card .verifc {
   position: absolute;
   right: -10px;
   top: -20px;
   width: 30px;
 }
-.services-main .lower-service .card-services .card img{
+.services-main .lower-service .card-services .card img {
   width: 15%;
   margin: 10px 0;
 }
@@ -216,20 +217,20 @@ body {
 }
 
 .bener-case {
-  background-color:#100d28;
+  background-color: #100d28;
 }
-.bener-case .card-main{
+.bener-case .card-main {
   display: grid;
   grid-template-columns: repeat(2,minmax(1fr,200px));
   align-items: center;
   justify-content: center;
 }
-.bener-case  .card {
+.bener-case .card {
   background-color: #211c32;
   margin: 20px 20px;
   padding: 20px 25px;
   box-shadow: 5px 5px 20px #0e0e0e12;
-  border-start-start-radius:5px;
+  border-start-start-radius: 5px;
 }
 .bener-case .card .text-card h2 {
   font-size: 34px;
@@ -238,103 +239,110 @@ body {
   text-align: center;
   color: #2984e3;
 }
-.bener-case .card .text-card p{
+.bener-case .card .text-card p {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 600;
   text-align: left;
   color: white;
 }
-.bener-case .card .description p{
+.bener-case .card .description p {
   margin: 10px 0;
   color: snow;
   font-size: 14px;
 }
-.bener-case .h1-case{
+.bener-case .h1-case {
   padding: 40px;
 }
-.bener-case .h1-case h1{
+.bener-case .h1-case h1 {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: 800;
   text-align: center;
   color: #1767cc;
   padding: 15px 0;
-  
+
 }
-.bener-case .h1-case p{
+.bener-case .h1-case p {
   color: snow;
 }
-.quem-somos{
+.quem-somos {
   background-color: hsl(278.4,0%,6.5%);
 }
-.quem-somos .h1-case{
+.quem-somos .h1-case {
   padding: 40px;
 }
-.quem-somos .h1-case h1{
+.quem-somos .h1-case h1 {
   font-size: 22px;
   text-transform: uppercase;
   font-weight: 800;
   text-align: left;
   color: #1767cc;
   padding: 15px 0;
-  
+
 }
-.quem-somos .h1-case p{
+.quem-somos .h1-case p {
   color: snow;
 }
-.quem-somos  .about-video{
+.quem-somos .about-video {
   width: 100%;
   max-width: 800px;
   display: flex;
   position: relative;
 }
-.quem-somos .about-video video{
+.quem-somos .about-video video {
   width: 100%;
   max-width: 800px;
   display: flex;
   position: relative;
 }
-.quem-somos button{
+.quem-somos button {
   background-color: rgb(152,29,221);
-  display:block;
+  display: block;
   margin: 15px 25px;
   border-radius: 8px;
   padding: 1em;
   border: none;
 }
-.quem-somos button a{
+.quem-somos button a {
   text-decoration: none;
   color: white;
   font-size: 22px;
   font-weight: 800;
   text-transform: uppercase;
 }
-.rodape{
+.rodape {
   background-color: hsl(278.4,0%,6.5%);
   padding: 20px 25px;
 }
-.rodape .copy small{
+.rodape .copy small {
   color: snow;
   font-size: 18px;
 }
-.rodape .localizacao h2{
+.rodape .localizacao h2 {
   padding: 10px 0;
   color: snow;
-  font-size: 14px;
+  font-size: 24px;
   text-transform: uppercase;
   font-weight: 800;
 }
-.rodape .localizacao address{
+.rodape .localizacao address {
   color: snow;
 }
-.rodape .contato h2{
+.rodape .contato {
+  padding: 25px 0;
+}
+.rodape .contato h2 {
   padding: 10px 0;
   color: snow;
-  font-size: 14px;
+  font-size: 24px;
   text-transform: uppercase;
+  font-weight: 800;
 }
-.rodape .contato address{
+.rodape .contato address {
   color: snow;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
