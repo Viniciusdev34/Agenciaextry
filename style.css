@@ -93,7 +93,7 @@ body{
 } 
 .btn-blue{
     padding: 1.2em 3em;
-    background-color: #2984e3;
+    background:linear-gradient(40deg,#2984e3, #cac3ff);
     color: #100d28;
     border: none;
     border-radius: 4px; 
@@ -102,6 +102,7 @@ body{
     text-decoration: none;
     font-weight: 600;
     color: white;
+    text-transform: uppercase;
 }
 .main-header{
     display: flex;
@@ -121,6 +122,9 @@ body{
 .main-header .logo img{
     width: 100%;
 }
+.main-header .btn-menu{
+    display: none   ;
+}
 
 .main-header .menu-case .menu-ul{
     display: flex;
@@ -132,13 +136,16 @@ body{
     padding: 8px;
     transition: 0.4s ease-in;
 }
+.main-header .menu-case .menu-ul > #btn{
+   display: none;
+}
 .main-header .menu-case .menu-ul li a{
     color: white;
     font-weight: 600;
     transition: 0.4s ease-in;
 }
 .main-header .menu-case .menu-ul li:hover{
-    background-color: #2983e377;
+    background:linear-gradient(40deg,#2984e3, #cac3ff);
 }
 .main-header .menu-case .menu-ul li:hover a{
     color: white;
@@ -146,13 +153,14 @@ body{
 .btn{
     padding: 1.2em 2em;
     border:1px solid #cfcfcf;
+    background: linear-gradient(40deg,#2984e3, #cac3ff);
     border-radius: 4px;
     display: block;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
 .btn:hover{
-    background-color: #2984e3;
+    background:linear-gradient(40deg,#17579b, #bbb3fc);
     border:1px solid transparent;
     cursor: pointer;
 }
@@ -251,10 +259,10 @@ body{
 }
 .main-action .services-main .services-cards .cards-case{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
 }
 .main-action .services-main .services-cards .cards-case .cards{
     background-color: transparent;
@@ -407,7 +415,7 @@ body{
 }
 .main-action .produtos-main .cards-case{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(340px,1fr));
     align-items: center;
     justify-content: space-between;
     gap: 10px;
@@ -530,6 +538,7 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
+    width: 50%;
 }
 .main-action .bener .bener-case .bener-card{
     display: grid;
@@ -634,7 +643,6 @@ body{
         width: 100%;
         position: relative;
     }
-    
     .main-header .logo {
         max-width: 150px;
     }
@@ -665,8 +673,25 @@ body{
         transition: all 0.4s ease-in-out;
     }
     .main-header .menu-case .menu-ul.open{
-        height: 100vh;
+        height: 80vh;
         overflow: auto;
+    }
+    .main-header .menu-case .menu-ul> #btn{
+        display: block;
+        padding: 1.4em 1.2em;
+        border: none;
+        background:linear-gradient(40deg,#2984e3, #cac3ff);
+        width: 40%;
+        border-radius: 8px;
+        border: 2px solid #52a7e0;
+    }
+    
+    .main-header .menu-case .menu-ul> #btn a{
+        font-size: 1.2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: #082b50;
     }
     
     .main-header .menu-case .menu-ul li {
@@ -811,5 +836,14 @@ body{
         margin-top: 20px;
         margin-bottom: 2em;
         transition: 0.2s ease-in-out;
+    }
+}
+@media screen and (min-width:1000px){
+    .main-action .services-main .services-cards .cards-case{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
     }
 }
