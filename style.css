@@ -17,16 +17,19 @@
     --font-normal:18px;
     --font-medium:42px;
     --font-normal-button:18px;
-    --font-small-services:36px;
+    --font-small-services:30px;
     --font-small-about:80px;
     --font-leads:50px;
     --font-langer:32px;
     --font-langer-44:40px;
+    --font-x-langer:14px;
+    --font-xx-langer:18px;
 }
 body{
     width: 100%;
     height: 100%;
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 .main-header{
     display: flex;
@@ -59,7 +62,7 @@ body{
 .main-header .menu-main ul > li{
     padding: 0 15px;
     position: relative;
-    border: 1px solid #4A87E1;
+    border: 1px solid #4a86e11c;
     margin: 0 15px;
     padding: 0.5em 1.3em;
     border-radius: 20px;
@@ -78,7 +81,7 @@ body{
     flex-direction: column;
     gap: 15px;
     list-style: none;
-    background-color: rgba(240, 248, 255, 0.151);
+    background-color: rgba(18, 34, 48, 0.699);
     backdrop-filter: blur(10px);
     border: 2.5px solid var(--bg-color-button-blue);
     border-radius: 4px;
@@ -90,13 +93,14 @@ body{
     transition: all 0.5s ease-in-out;
 }
 .main-header .menu-main ul > li:hover>ul{
-    height: 35vh;
+    height: 50vh;
     opacity: 1;
     overflow: initial;
 }
 .main-header .menu-main ul > li> ul li{
     color: #5ED4EF;
     text-transform: capitalize;
+    border: none;
 }
 .main-header .btn-orc{
     padding: 0.9em 2em;
@@ -217,9 +221,14 @@ body{
     margin-top: 6em;
 }
 .main .cards-frente .cards-case .cards{
-    border: 1px solid #a62795;
-    height: 350px;
+    background-color: #172024;
+    height: auto;
+    padding: 20px 0;
     border-radius: 15px;
+    box-shadow: 1px 1px 10px #a62795f1,
+    -0.5px -0.5px 3px #ffffff,
+    -2px -1px  #89c0ff,
+    2px 2px  #47ffa9;
 }
 .main .cards-frente .cards-case .cards .card-title{
     display: flex;
@@ -230,8 +239,10 @@ body{
     color: white;
     text-transform: uppercase;
 }
+.main .cards-frente .cards-case .cards .card-title .icon img{
+    width: 30px;
+}
 .main .cards-frente .cards-case .cards .card-desc{
-    background-color: #0F242D;
     backdrop-filter: blur(10px);
     padding: 10px 20px;
     line-height: 1.8;
@@ -334,17 +345,18 @@ body{
 .main .hero-services{
     width: 100vw;
     height: 100vh;
-    /* background: url("image/medium-shot-photorealistic-astronaut.jpg"); */    
 }
 .main .hero-services .hero-banner-services{
-    width: 100%;
-    background: url("image/medium-shot-photorealistic-astronaut.jpg");
+    width: 100vw;
     background-position: center;
     background-size: cover;
     margin-top: 4em;
 }
-.main .hero-services .hero-banner-services .services-case .title-hero{
+.main .hero-services .hero-banner-services .services-case{
     padding: 50px 40px;
+    height: 130vh;
+    background: url("image/medium-shot-photorealistic-astronaut.jpg");
+    background-size: cover;
 }
 .main .hero-services .hero-banner-services .services-case .title-hero h1{
     color: white;
@@ -357,52 +369,262 @@ body{
 }
 .main .hero-services .hero-banner-services .services-case .services-hero{
     width: 100%;
-    padding: 20px 40px;
-}
-.main .hero-services .hero-banner-services .services-case .services-hero li{
-    border: 2.5px solid #5ED4EF;
-    padding: 1.2em 1.5em;
-    border-radius: 20px;
-    text-transform: capitalize;
-    font-weight: 600;
-}
-.main .hero-services .hero-banner-services .services-case .services-hero .hero-menu{
+    margin: 8em auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(500px, 1fr));
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    list-style: none;
 }
-.main .hero-services .hero-banner-services .services-case .services-hero .hero-menu li{
-    color: white;
-    height: auto;
-    position: relative;
-    align-items: center;
+.main .hero-services .hero-banner-services .services-case .services-hero .card-drop{
+    border: 2.5px solid #5ED4EF;
+    border-radius: 20px;
+    font-weight: 600;
+    width: 500px;
+    height: 80px;
     overflow: hidden;
-    gap: 20px;
-    justify-content: center;
-    background-color: #4a86e11e;
-    backdrop-filter: blur(5px);
-    padding: 20px 20px;
+    background-color: #5c1c7562;
+    backdrop-filter: blur(14px);
+    transition: all 0.4s ease-in-out;
+    margin: 0 auto;
 }
-.main .hero-services .hero-banner-services .services-case .services-hero .hero-menu li img{
-    width: 20px;
+.main .hero-services .hero-banner-services .services-case .services-hero .card-drop.open{
+    overflow: initial;
+    height:40vh;
+    background-color: #479add36;
 }
-.main .hero-services .hero-banner-services .services-case .services-hero .hero-menu li > ul{
-    display: block;
-    height: 0;
+.main .hero-services .hero-banner-services .services-case .services-hero .card-drop .drop-services{
     opacity: 0;
     transition: all 0.4s ease-in-out;
+    padding: 4px 20px;
 }
-.main .hero-services .hero-banner-services .services-case .services-hero .hero-menu li > ul.open{
-    display: block;
-    height: 25vh;
-    overflow: auto;
+.main .hero-services .hero-banner-services .services-case .services-hero .card-drop .drop-services h3{
+    font-size: 24px;
+    color: white;
+    font-weight: 900;
+    text-transform: capitalize;
+    padding: 4px 0;
+}
+.main .hero-services .hero-banner-services .services-case .services-hero .card-drop.open .drop-services{
     opacity: 1;
 }
-.main .hero-services .hero-banner-services .services-case .services-hero .hero-menu li > ul li{
-    width: 100%;
-    margin: 10px 0;
+.main .hero-services .hero-banner-services .services-case .services-hero .card-drop .title-services{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.main .hero-services .hero-banner-services .services-case .services-hero .card-drop .title-services h2{
+    text-transform: capitalize;
+    font-size: 22px;
+    color: white;
+}
+.main .hero-services .hero-banner-services .services-case .services-hero .card-drop .title-services img{
+    width: 20px;
+}
+.main .hero-services .hero-banner-services .services-case .services-hero .card-drop:nth-child(5).open{
+    background-color: #479add36;
+    height: 48vh;
+}
+.main .hero-services .hero-banner-services .services-case .services-hero .card-drop:nth-child(4).open{
+    background-color: #479add36;
+    height: 30vh;
 }
 
+.main .about{
+    background-color: snow;
+}
+.main .about .about-main{
+    display: flex;
+    padding: 5em 40px;
+}
+.main .about .about-main .img-about{
+    max-width: 500px;
+}
+.main .about .about-main .img-about img{
+    width: 100%;
+}
+.main .about .about-main .grid h1{
+    font-size: var(--font-small-about);
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #A62795;
+}
+.main .about .about-main .grid h2{
+    font-family: "montserrat", sans-serif;
+    font-size: var(--font-x-langer);
+    text-transform: uppercase;
+    letter-spacing: 24px;
+}
+.main .about .about-main .grid .about-desc{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+}
+.main .about .about-main .grid .about-desc h3{
+    font-size: var(--font-xx-langer);
+    line-height: 1.8;
+    font-weight: 300;
+}
+.main .about .about-main .grid .about-desc h4{
+    font-size: var(--font-xx-langer);
+    line-height: 1.8;
+    color: #5C1C75;
+}
+.main .about .about-main .grid .btn-about .btn-line{
+    padding: 1.2em 2.8em;
+    background: var(--gradient-purple);
+    border-radius: 8px;
+    margin-top:20px ;
+    backdrop-filter: blur(20px);
+    border: 2.5px solid #A62795;
+}
+.main .about .about-main .grid .btn-about .btn-line a{
+    color: white;
+    font-size: var(--font-xx-langer);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+}
+.main .side-main .grid-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .side-main .grid-side .title-side{
+    padding: 5em 0;
+}
+.main .side-main .grid-side .title-side .text-side{
+    padding: 0 40px;
+}
+.main .side-main .grid-side .title-side h1{
+    font-size: var(--font-langer-44);
+    color: snow;
+    font-family: "montserrat",Arial, Helvetica, sans-serif;
+}
+.main .side-main .grid-side .title-side h2{
+    font-size: var(--font-xx-langer);
+    color: snow;
+    letter-spacing: 4px;
+}
+.main .side-main .grid-side form{
+    padding: 0 30px;
+    margin: 0 auto;
+}
+.main .side-main .grid-side form fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+}
+.main .side-main .grid-side form fieldset label{
+    color: snow;
+    font-size: var(--font-x-langer);
+    font-weight: 800;
+}
+.main .side-main .grid-side form fieldset input{
+    padding: 1.2em 2.4em;
+    border-radius: 20px;
+    border: 2.5px solid#5ED4EF;
+    background-color: transparent;
+    width: 300px;
+}
+.main .side-main .grid-side form button{
+    padding: 1.2em 2.4em;
+    border-radius: 20px;
+    margin: 20px 0;
+    background: var(--gradient-purple);
+    font-size: var(--font-xx-langer);
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+}
+.rodape{
+    background-color: snow;
+}
+.rodape .grid-rodape{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 50px 0;
+}
+.rodape .grid-rodape .main-rodape{
+    display: flex;
+    flex-direction: column;
+}
+.rodape .grid-rodape .main-rodape img{
+    width: 250px;
+    filter: grayscale(100%)
+}
+.rodape .grid-rodape .title-main h2{
+    font-family: "montserrat",Arial, Helvetica, sans-serif;
+    font-size: var(--font-small-services);
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #5C1C75;
+}
+.rodape .grid-rodape .title-main .contatos .email{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+.rodape .grid-rodape .title-main .contatos .email span > img{
+    width: 30px;
+}
+.rodape .grid-rodape .title-main .contatos .email h3{
+    border-bottom: 2px solid #5C1C75;
+}
+.rodape .grid-rodape .title-main .contatos{
+    margin: 20px 0;
+}
+.rodape .diretos-rodape{
+    text-align: center;
+    padding: 20px 0;
+    background-color: #172024;
+}
+.rodape .diretos-rodape h2{
+    color: white;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width:1000px) {
+    .hero-banner .case-hero .hero-title h1{
+        color: white;
+        font-size: clamp(1.5em,2vh,1.8em);
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    .hero-banner .case-hero .hero-title h1 > span{
+        color:#5ED4EF;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    .hero-banner .case-hero .hero-title h2{
+        font-size: 18px;
+    }
+    .hero-banner .case-hero .hero-img img{
+        width: 100%;
+    }
+    .main .side-main .grid-side{
+        display: flex;
+        flex-direction: column;
+    }
+    main .extry-main .extry-case {
+        display: flex;
+        flex-direction: column;
+    }
+    .main .extry-main .extry-case .img-cat img{
+        width: 100%;
+        margin-top: 4em;
+    }
+}
+@media screen and (max-width:600px){
+    .hero-banner .case-hero{
+        flex-direction: column;
+    }
+}

@@ -1,6 +1,6 @@
 
   let menuBtns = document.querySelectorAll(".arrow"); // Seleciona todos os botões
-let menus = document.querySelectorAll(".ul"); // Seleciona todas as ULs
+let menus = document.querySelectorAll(".card-drop"); // Seleciona todas as ULs
 
 menuBtns.forEach((btn, index) => {
     btn.addEventListener("click", () => {
